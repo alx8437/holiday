@@ -1,0 +1,22 @@
+.loginPageWrapper {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+}
+
+.loginPageForm{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+}
+
+.input {
+
+}
+
+.inputSubmit {
+
+}
+
