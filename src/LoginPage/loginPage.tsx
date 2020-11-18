@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import {SubmitHandler, useForm } from "react-hook-form";
+import React from "react";
+import {SubmitHandler, useForm} from "react-hook-form";
 import styles from "./LoginPage.module.css"
 
 type Inputs = {
@@ -21,10 +21,20 @@ export default function LoginPage() {
         <div>
             <div className={styles.loginPageWrapper}>
                 <form className={styles.loginPageForm} onSubmit={handleSubmit(onSubmit)}>
-                    <input className={styles.input} name="login" ref={register} />
-                    <input className={styles.input} name="password" ref={register({ required: true })} />
+                    <input
+                        placeholder="login"
+                        className={styles.input}
+                        name="login"
+                        ref={register} />
+                    <input
+                        className={styles.input}
+                        name="password"
+                        ref={register({ required: true })}
+                        placeholder="password"
+                        type="password"
+                    />
                     {errors.password && <span>This field is required</span>}
-                    <input type="submit" />
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         </div>
