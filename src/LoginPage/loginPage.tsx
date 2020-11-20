@@ -9,13 +9,11 @@ type Inputs = {
 
 
 export default function LoginPage() {
-    const { register, handleSubmit, watch, errors } = useForm<Inputs>();
+    const { register, handleSubmit, errors } = useForm<Inputs>();
 
     const onSubmit = (data: SubmitHandler<Record<string, any>>) => {
         console.log(data);
     }
-
-    console.log(watch("example")) // watch input value by passing the name of it
 
     return (
         <div>
